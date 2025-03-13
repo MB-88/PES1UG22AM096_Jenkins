@@ -10,7 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Compile main.cpp
                     sh 'g++ ${FILE_NAME} -o ${BUILD_NAME}'
                 }
             }
@@ -19,7 +18,6 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    // Run the compiled program
                     sh './${BUILD_NAME}'
                 }
             }
