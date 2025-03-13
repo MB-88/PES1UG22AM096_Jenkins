@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        REPO_URL = 'your-repo-url'
+        REPO_URL = 'https://github.com/MB-88/PES1UG22AM096_Jenkins'
         FILE_NAME = 'main.cpp'
-        BUILD_NAME = 'YOUR_SRN-1'
+        BUILD_NAME = 'PES1UG22AM096-1'
     }
 
     stages {
