@@ -1,8 +1,6 @@
-#include<iostream>
-using namespace std;
+#include <iostream>
 
-int main()
-{
-    cout<<"MB";
-    return 1;
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
 }
