@@ -12,9 +12,12 @@ pipeline {
             steps {
                 script {
                     sh 'git clone ${REPO_URL} repo'
+                    sh 'cd repo && git config user.email "mohith.b88@gmail.com"'
+                    sh 'cd repo && git config user.name "Mohith Bharath"'
                     sh 'cd repo && touch ${FILE_NAME}'
-                    sh 'echo "#include <iostream>\nusing namespace std;\nint main() { cout << \"Hello, World!\" << endl; return 0; }" > repo/${FILE_NAME}'
-                    sh 'cd repo && git add ${FILE_NAME} && git commit -m "Added main.cpp" && git push'
+                    sh 'echo \"#include <iostream>\\nusing namespace std;\\nint main() { cout << \\\"Hello, World!\\\" << endl; return 0; }\" > repo/${FILE_NAME}'
+                    sh 'cd repo && git add ${FILE_NAME} && git commit -m \"Added main.cpp\"'
+                    sh 'cd repo && git push'
                 }
             }
         }
